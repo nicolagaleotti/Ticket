@@ -13,6 +13,8 @@ namespace TicketCP
         private string cellulare;
         private string sesso;
 
+        public List<Prenotazione> Prenotazioni { get; set; } = new List<Prenotazione>();
+
         public Cliente(string nome, string cognome)
         {
             Nome = nome;
