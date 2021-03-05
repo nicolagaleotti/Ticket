@@ -31,7 +31,7 @@ namespace TicketCP
             double costo = PREZZO;
             if ((Cliente.GetSesso() == "M" && this.Ora == "18:00") || Cliente.GetSesso() == "F")
             {
-                costo = costo - (costo*10)/ 100;
+                costo = costo - (costo * 10) / 100;
             }
             return costo;
         }

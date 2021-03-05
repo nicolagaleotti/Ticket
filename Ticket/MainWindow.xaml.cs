@@ -110,7 +110,7 @@ namespace Ticket
                 if (cmbOrari.SelectedIndex != -1)
                 {
                     ora = cmbOrari.Text;
-                } 
+                }
                 else
                 {
                     throw new Exception("Selezionare un orario!");
@@ -128,6 +128,79 @@ namespace Ticket
             {
                 MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
+        }
+
+        private void btnCancella_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                lb1.Items.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnEsci_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void cmbOrari1_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (string s in orari)
+            {
+                cmbOrari1.Items.Add(s);
+            }
+        }
+
+        private void btnPrenotazioniCliente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                foreach (Prenotazione p in Clienti[cmbClienti1.SelectedIndex].Prenotazioni)
+                {
+                    lb2.Items.Add(p.Stampa());
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selezionare un cliente!", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
+
+        private void btnPrenotazioniEvento_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                foreach (Prenotazione p in Prenotazioni)
+                {
+                    if (p.Ora == cmbOrari1.Text)
+                    {
+                        lb2.Items.Add(p.Stampa());
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selezionare un orario!", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
+
+        private void btnPulisci_Click(object sender, RoutedEventArgs e)
+        {
+            txtNome.Clear();
+            txtCognome.Clear();
+            txtCellulare.Clear();
+            btnM.IsChecked = true;
+            cmbClienti.SelectedIndex = -1;
+            dpData.SelectedDate = null;
+            cmbOrari.SelectedIndex = -1;
+            lb1.Items.Clear();
+            cmbClienti1.SelectedIndex = -1;
+            cmbOrari1.SelectedIndex = -1;
+            lb2.Items.Clear();
         }
     }
 }

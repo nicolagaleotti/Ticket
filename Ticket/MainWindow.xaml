@@ -103,7 +103,7 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button Name="btnCancella" Content="Cancella" Width="140" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown"/>
+                            <Button Name="btnCancella" Content="Cancella" Width="140" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" Click="btnCancella_Click"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -123,15 +123,15 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="12" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <ComboBox Name="cmbOrari1" Width="180" Height="33" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <ComboBox Name="cmbOrari1" Width="180" Height="33" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Loaded="cmbOrari1_Loaded"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="13" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button Name="btnPrenotazioniCliente" Content="Prenotazioni Cliente" Width="220" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown"/>
+                            <Button Name="btnPrenotazioniCliente" Content="Prenotazioni Cliente" Width="220" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" Click="btnPrenotazioniCliente_Click"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="13" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button Name="btnPrenotazioniEvento" Content="Prenotazioni Evento" Width="220" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown"/>
+                            <Button Name="btnPrenotazioniEvento" Content="Prenotazioni Evento" Width="220" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" Click="btnPrenotazioniEvento_Click"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -139,11 +139,11 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="15" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button Name="btnPulisci" Content="Pulisci" Width="140" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown"/>
+                            <Button Name="btnPulisci" Content="Pulisci" Width="140" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" Click="btnPulisci_Click"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="15" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button Name="btnEsci" Content="Esci" Width="140" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown"/>
+                            <Button Name="btnEsci" Content="Esci" Width="140" Height="33" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,5,5" Foreground="White" Background="Brown" Click="btnEsci_Click"/>
                         </StackPanel>
 
                     </Grid>

@@ -43,7 +43,7 @@ namespace TicketCP
         }
 
         public string GetSesso()
-        { 
+        {
             return sesso;
         }
 
